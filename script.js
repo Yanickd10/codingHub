@@ -22,4 +22,8 @@ subMenuTitles.forEach((title) => {
   title.addEventListener("click", () => {
     menu.classList.remove("submenu-active");
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2a55cdbea8e2d74518dd448366e9121197eaf7a5
