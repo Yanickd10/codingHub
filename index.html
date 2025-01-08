@@ -1,90 +1,138 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodingHub</title>
-    <link rel="stylesheet" href="style.css" /> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-  </head>
-  <body>
-    <nav class="sidebar">
-      <a href="#" class="logo">CodingHub</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <div class="menu-content">
-        <ul class="menu-items">
-          <div class="menu-title">Welcome</div>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
 
-          <li class="item">
-            <a href="#">About Us</a>
-          </li>
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
 
-          <li class="item">
-            <div class="submenu-item">
-              <span>Computer Science</span>
-              <i class="fa-solid fa-chevron-right"></i>
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            margin: 1rem 0 0.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a web developer passionate about creating beautiful and functional websites. Explore my work below.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/250" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>A brief description of my amazing project.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/250" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Another incredible project I worked on.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/250" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>A fantastic solution to a challenging problem.</p>
+                </div>
             </div>
+        </section>
 
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Computer Science
-              </div>
-              <li class="item">
-                <a href="#">Networking</a>
-              </li>
-              <li class="item">
-                <a href="#">Web development</a>
-              </li>
-              <li class="item">
-                <a href="#">Cyber security</a>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <div class="submenu-item">
-              <span>Mathemetics</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: +123456789</p>
+        </section>
+    </div>
 
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Mathemetics
-              </div>
-              <li class="item">
-                <a href="#">Calculus I</a>
-              </li>
-              <li class="item">
-                <a href="#">Calculus II</a>
-              </li>
-              <li class="item">
-                <a href="#">Calculus III</a>
-              </li>
-               
-            </ul>
-          </li>
-
-          <li class="item">
-            <a href="#">Contact</a>
-          </li>
-
-          <li class="item">
-            <a href="#">Portfolios</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <nav class="navbar">
-      <i class="fa-solid fa-bars" id="sidebar-close"></i> 
-    </nav>
-
-    <main class="main">
-   
-    </main>
-
-    <script src="script.js"></script>
-  </body>
-</html> 
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
