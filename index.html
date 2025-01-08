@@ -3,121 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 0.5rem;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            padding: 2rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .card {
-            background: #f4f4f4;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .card h3 {
-            margin: 1rem 0 0.5rem;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>My portfolio</title>
+   
 </head>
 <body>
     <header>
+    <div class="logoimg">
+      <img src="image.jpg" alt="Profile Picture">
+    </div>
+      <div class="navcontent">
         <h1>Welcome to My Portfolio</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
+      </div> 
+       
     </header>
 
     <div class="container">
         <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm a web developer passionate about creating beautiful and functional websites. Explore my work below.</p>
+            <h2>About Me</h2> 
+            <div class="aboutMe">
+              <p>I am a passionate and skilled full-stack developer with expertise in building dynamic,
+                user-friendly, and efficient web applications. With a solid foundation in HTML, 
+                CSS, and JavaScript,
+                 I specialize in front-end development to create seamless and responsive user interfaces. 
+                 On the back end, I am proficient in PHP, ensuring robust and scalable server-side applications.
+ 
+               Driven by a continuous learning mindset, I aim to deliver innovative solutions that align with user 
+               needs and industry standards. <br><br> My experience as a developer and teacher of Mathematics and Computer Science further enhances my ability to 
+               approach problem-solving with analytical precision.</p>
+            </div>
+           
         </section>
 
         <section id="projects">
             <h2>My Projects</h2>
             <div class="grid">
                 <div class="card">
-                    <img src="https://via.placeholder.com/250" alt="Project 1">
+                    <img src="project3.jpg" alt="Project 1">
                     <h3>Project 1</h3>
                     <p>A brief description of my amazing project.</p>
                 </div>
                 <div class="card">
-                    <img src="https://via.placeholder.com/250" alt="Project 2">
+                    <img src="project2.jpg" alt="Project 2">
                     <h3>Project 2</h3>
                     <p>Another incredible project I worked on.</p>
                 </div>
                 <div class="card">
-                    <img src="https://via.placeholder.com/250" alt="Project 3">
+                    <img src="project3.jpg" alt="Project 3">
                     <h3>Project 3</h3>
                     <p>A fantastic solution to a challenging problem.</p>
                 </div>
@@ -126,13 +63,14 @@
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Email: example@example.com</p>
-            <p>Phone: +123456789</p>
+            <p>Email:yanickdushime2002@gmail.com</p>
+            <p>Phone: (+250) 791357676</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        <p> &copy; <span onload="gettime()" id="mydate"></span> Yanick. All rights reserved.</p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>

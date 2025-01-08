@@ -1,130 +1,136 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.sidebar {
-  position: fixed;
-  height: 100%;
-  width: 260px;
-  background: #11101d;
-  padding: 15px;
-  z-index: 99;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
-.logo {
-  font-size: 25px;
-  padding: 0 15px;
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0; 
+    display: flex;
+    margin: auto;
 }
-.sidebar a {
-  color: #fff;
-  text-decoration: none;
+.logoimg
+{
+    width: 30%;
+    justify-content: center;
+    align-items: center;
 }
-.menu-content {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  margin-top: 40px;
-  overflow-y: scroll;
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
-.menu-content::-webkit-scrollbar {
-  display: none;
+.logoimg img
+{ 
+    position: absolute; 
+    left: 1%;
+    margin-top: 1px;
+    width: 10%;
+    border-radius: 50%;
+    border: 2px solid red; 
 }
-.menu-items {
-  height: 100%;
-  width: 100%;
-  list-style: none;
-  transition: all 0.4s ease;
+ 
+nav a {
+    color: #fff;
+    text-decoration: none;
+
+
 }
-.submenu-active .menu-items {
-  transform: translateX(-56%);
+.aboutMe
+{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(176, 215, 215, 0.639);
 }
-.menu-title {
-  color: #fff;
-  font-size: 14px;
-  padding: 15px 20px;
+.aboutMe  p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
 }
-.item a,
-.submenu-item {
-  padding: 16px;
-  display: inline-block;
-  width: 100%;
-  border-radius: 12px;
+nav a:hover {  
+   border-bottom: 1px solid white ;
 }
-.item i {
-  font-size: 12px;
+
+.container {
+    padding: 2rem;
 }
-.item a:hover,
-.submenu-item:hover,
-.submenu .menu-title:hover {
-  background: rgba(255, 255, 255, 0.1);
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
-.submenu-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  cursor: pointer;
+
+.card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border: 1px solid #ddd;
+
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px;
+    transition: transform 0.3s ease;
 }
-.submenu {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: calc(-100% - 26px);
-  height: calc(100% + 100vh);
-  background: #11101d;
-  display: none;
+
+.card:hover {
+    transform: scale(1.05);
 }
-.show-submenu ~ .submenu {
-  display: block;
+
+.card img{
+    width: 100%;
+    border-radius: 5px;
 }
-.submenu .menu-title {
-  border-radius: 12px;
-  cursor: pointer;
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
 }
-.submenu .menu-title i {
-  margin-right: 10px;
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
-.navbar,
-.main {
-  left: 260px;
-  width: calc(100% - 260px);
-  transition: all 0.5s ease;
-  z-index: 1000;
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+   header
+   {
+    display: block;  
+    padding-left:10% ;
+   }
+   .logoimg img
+   {
+width: 90%;
+   }
+   nav a {
+    width: 90%;
+    color: #fff;
+    text-decoration: none; 
 }
-.sidebar.close ~ .navbar,
-.sidebar.close ~ .main {
-  left: 0;
-  width: 100%;
+.logoimg img
+{ 
+    position: relative; 
+    left: 1%;
+    margin-top: 1px;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid red; 
 }
-.navbar {
-  position: fixed;
-  color: #fff;
-  padding: 15px 20px;
-  font-size: 25px;
-  background: #4070f4;
-  cursor: pointer;
-}
-.navbar #sidebar-close {
-  cursor: pointer;
-}
-.main {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  z-index: 100;
-  background: #e7f2fd;
-}
-.main h1 {
-  color: #11101d;
-  font-size: 40px;
-  text-align: center;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 2a55cdbea8e2d74518dd448366e9121197eaf7a5
+ 
+} 
